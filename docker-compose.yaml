@@ -1,0 +1,17 @@
+services:
+  app:
+    image: superjordi/devops-node-pipeline:latest
+    container_name: devops-node-pipeline
+    ports:
+      - "3000:3000"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    restart: unless-stopped
+
+  watchtower:
+    image: nickfedor/watchtower
+    container_name: watchtower
+    command: --label-enable --interval 60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

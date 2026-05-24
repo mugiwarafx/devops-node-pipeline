@@ -1,0 +1,12 @@
+{
+  "name": "devops-node-pipeline",
+  "version": "1.0.0",
+  "description": "DevOps with Docker exercise 3.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
